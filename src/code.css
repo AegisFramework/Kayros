@@ -1,0 +1,19 @@
+/**
+* ==============================
+* Code
+* ==============================
+*/
+
+pre {
+	background: #f5f5f5;
+	padding: 1em;
+	overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}

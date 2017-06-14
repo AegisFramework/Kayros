@@ -1,0 +1,29 @@
+/**
+* ==============================
+* Paddings
+* ==============================
+*/
+
+.padded-0 {
+	padding: 0;
+}
+
+.padded-1 {
+	padding: 1em;
+}
+
+.padded-2 {
+	padding: 2em;
+}
+
+.padded-3 {
+	padding: 3em;
+}
+
+.padded-4 {
+	padding: 4em;
+}
+
+.padded-5 {
+	padding: 5em;
+}

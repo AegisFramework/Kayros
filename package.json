@@ -1,0 +1,29 @@
+{
+  "name": "kayros",
+  "version": "0.1.0",
+  "description": "Aegis CSS Library",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AegisFramework/Kayros.git"
+  },
+  "keywords": [
+    "aegis",
+    "css",
+    "framework",
+    "kayros"
+  ],
+  "author": "Diego Islas Ocampo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AegisFramework/Kayros/issues"
+  },
+  "homepage": "http://aegisframework.com/",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-header": "^1.8.8",
+    "gulp-rename": "^1.2.2"
+  }
+}

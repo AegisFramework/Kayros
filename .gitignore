@@ -1,6 +1,14 @@
-.DS_Store
 *.zip
-node_modules
-*~
+*.rar
+.DS_Store
+.Thumbs
+.thumbs
 ._*
 ~*
+*~
+node_modules
+build
+.conf
+.ftpconfig
+.sftpconfig
+package-lock.json

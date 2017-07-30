@@ -67,7 +67,7 @@ a {
 	color: inherit;
 	cursor: pointer;
 	background-color: transparent;
-  	-webkit-text-decoration-skip: objects;
+	-webkit-text-decoration-skip: objects;
 }
 
 a:active,
@@ -79,11 +79,6 @@ abbr[title] {
 	border-bottom: none;
 	text-decoration: underline;
 	text-decoration: underline dotted;
-}
-
-b,
-strong {
-	font-weight: inherit;
 }
 
 b,
@@ -128,7 +123,6 @@ sup {
 img {
 	border-style: none;
 	-webkit-user-drag: none;
-	user-drag: none;
 	-webkit-touch-callout: none;
 	border: 0;
 	max-width: 100%;
@@ -177,7 +171,7 @@ input {
 
 button,
 select {
-  	-webkit-appearance: none;
+	-webkit-appearance: none;
 	-moz-appearance: none;
 	border: none;
 	outline: none;
@@ -278,7 +272,8 @@ th {
 	padding: 0;
 }
 
-.unselectable, img {
+.unselectable,
+img {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;

@@ -1,6 +1,6 @@
 /**
  * ==============================
- * Kayros 0.1.1 | MIT License
+ * Kayros 0.2.0 | MIT License
  * http://aegisframework.com/
  * ==============================
  */
@@ -129,22 +129,12 @@ sup {
 
 img {
 	border-style: none;
-	-webkit-user-drag: none;
-	-webkit-touch-callout: none;
 	border: 0;
 	max-width: 100%;
 }
 
 svg:not(:root) {
 	overflow: hidden;
-}
-
-code,
-kbd,
-pre,
-samp {
-	font-family: monospace, monospace;
-	font-size: 1em;
 }
 
 figure {
@@ -155,118 +145,6 @@ hr {
 	box-sizing: content-box;
 	height: 0;
 	overflow: visible;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-	color: inherit;
-	font: inherit;
-	margin: 0;
-}
-
-optgroup {
-	font-weight: bold;
-}
-
-button,
-input {
-	overflow: visible;
-}
-
-button,
-select {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	border: none;
-	outline: none;
-	text-transform: none;
-}
-
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-	-webkit-appearance: button;
-}
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-	border-style: none;
-	padding: 0;
-}
-
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-	outline: 1px dotted ButtonText;
-}
-
-button[disabled],
-html input[disabled] {
-	cursor: default;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-
-fieldset {
-	border: 1px solid #c0c0c0;
-	margin: 0 2px;
-	padding: 0.35em 0.625em 0.75em;
-}
-
-legend {
-	box-sizing: border-box;
-	color: inherit;
-	display: table;
-	max-width: 100%;
-	padding: 0;
-	white-space: normal;
-}
-
-textarea {
-	resize: none;
-	overflow: auto;
-}
-
-[type="checkbox"],
-[type="radio"] {
-	box-sizing: border-box;
-	padding: 0;
-}
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-	height: auto;
-}
-
-[type="search"] {
-	-webkit-appearance: textfield;
-	outline-offset: -2px;
-}
-
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
-}
-
-::-webkit-input-placeholder {
-	color: inherit;
-	opacity: 0.54;
-}
-
-::-webkit-file-upload-button {
-	-webkit-appearance: button;
-	font: inherit;
 }
 
 table {
@@ -283,7 +161,12 @@ th {
 img {
 	-webkit-user-select: none;
 	-moz-user-select: none;
+	-webkit-touch-callout: none;
 	-ms-user-select: none;
+	-khtml-user-select: none;
+	-o-user-select: none;
+	pointer-events: none;
+	-webkit-user-drag: none;
 	user-select: none;
 }
 /**
@@ -659,6 +542,10 @@ img {
 .scroll-x {
 	overflow-x: scroll;
 }
+
+.no-scroll {
+	overflow-x: hidden;
+}
 /**
 * ==============================
 * Hero Banners
@@ -698,6 +585,37 @@ img {
 .hero,
 .hero-transparent {
 	height: 50%;
+}
+/**
+* ==============================
+* Modal Windows
+* ==============================
+*/
+
+.modal {
+	display: none;
+	text-align: center;
+	z-index: 99;
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.modal.active {
+	display: block;
+}
+
+.modal  > div {
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	position: absolute;
+	padding: 2em;
+	background-color: #fff;
 }
 /**
 * ==============================
@@ -757,6 +675,19 @@ img {
 
 .align-justify {
 	text-align: justify;
+}
+
+.vertical.align-center > * {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.vertical.align-left > * {
+	margin-right: auto;
+}
+
+.vertical.align-right > * {
+	margin-left: auto;
 }
 /**
 * ==============================
@@ -1049,6 +980,161 @@ img {
 		width: 80%;
 		float: right;
 	}
+}
+/**
+* ==============================
+* Form Elements
+* ==============================
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	color: inherit;
+	font: inherit;
+	margin: 0;
+	outline: none;
+	border: none;
+	font-size: inherit;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+button,
+input {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+	cursor: pointer;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+
+textarea {
+	resize: none;
+	overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+[type="search"] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+::-webkit-input-placeholder {
+	color: inherit;
+	opacity: 0.54;
+}
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+input[type=range]::-moz-range-track {
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+input[type=range]::-ms-fill-lower {
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+input[type=range]:focus::-ms-fill-lower {
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+input[type=range]::-ms-fill-upper {
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+input[type=range]:focus::-ms-fill-upper {
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+input[type=range] {
+	-webkit-appearance: none;
+	background: transparent;
+	outline: none;
 }
 /**
 * ==============================

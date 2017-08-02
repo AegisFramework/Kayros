@@ -1,6 +1,6 @@
 {
   "name": "kayros",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Aegis CSS Library",
   "main": "gulpfile.js",
   "repository": {

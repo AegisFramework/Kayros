@@ -57,3 +57,16 @@
 .align-justify {
 	text-align: justify;
 }
+
+.vertical.align-center > * {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.vertical.align-left > * {
+	margin-right: auto;
+}
+
+.vertical.align-right > * {
+	margin-left: auto;
+}

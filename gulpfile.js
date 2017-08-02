@@ -19,11 +19,11 @@ var banner = ['/**',
 var minBanner = '/* Kayros <%= pkg.version %> | <%= pkg.license %> License | <%= pkg.homepage %> */\n'
 
 gulp.task('default', function() {
-  return gulp.src(['src/normalize.css', 'src/grid.css', 'src/scroll.css', 'src/hero.css', 'src/alignment.css', 'src/padding.css', 'src/navigation.css', 'src/circles.css', 'src/code.css', 'src/material-design.css', 'src/fixes.css'])
+  return gulp.src(['src/normalize.css', 'src/grid.css', 'src/scroll.css', 'src/hero.css', 'src/modal.css', 'src/alignment.css', 'src/padding.css', 'src/navigation.css', 'src/form.css', 'src/circles.css', 'src/code.css', 'src/material-design.css', 'src/scroll.css', 'src/fixes.css'])
     .pipe(concat({ path: 'kayros.css', stat: { mode: '0664' }, newLine: '\r\n\r\n'}))
     .pipe(header(banner, { pkg : pkg }))
     .pipe(gulp.dest('dist/'))
-    .pipe(cssnano())
+    .pipe(cssnano({zindex: false}))
     .pipe(rename({ extname: '.min.css' }))
     .pipe(header(minBanner, { pkg : pkg }))
     .pipe(gulp.dest('dist/'));

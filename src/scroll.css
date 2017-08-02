@@ -14,3 +14,7 @@
 .scroll-x {
 	overflow-x: scroll;
 }
+
+.no-scroll {
+	overflow-x: hidden;
+}

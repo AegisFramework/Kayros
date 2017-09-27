@@ -1,6 +1,6 @@
 /**
  * ==============================
- * Kayros 0.2.0 | MIT License
+ * Kayros 0.2.1 | MIT License
  * http://aegisframework.com/
  * ==============================
  */
@@ -821,8 +821,7 @@ img {
 */
 
 .full-hero,
-.hero,
-.hero-transparent {
+.hero {
 	height: 100%;
 	color: #fff;
 	background-repeat: no-repeat;
@@ -848,11 +847,25 @@ img {
 .hero.light::before,
 .full-hero.light::before {
 	background: rgba(255, 255, 255, 0.5);
+	color: #424242;
 }
 
-.hero,
-.hero-transparent {
-	height: 50%;
+.hero > .middle {
+	width: 90%;
+}
+
+/** Medium Screens, Tablets (601px) **/
+@media screen and (min-width: 37.56255em) {
+	.hero {
+		height: 80%;
+	}
+}
+
+/** Medium Devices, Desktops (992px)**/
+@media screen and (min-width: 62em) {
+	.hero {
+		height: 50%;
+	}
 }
 /**
 * ==============================

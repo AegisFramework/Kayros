@@ -18,7 +18,7 @@
 	display: block;
 }
 
-.modal  > div {
+.modal > * {
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
@@ -28,4 +28,6 @@
 	position: absolute;
 	padding: 2em;
 	background-color: #fff;
+	max-height: 100%;
+	overflow: scroll;
 }

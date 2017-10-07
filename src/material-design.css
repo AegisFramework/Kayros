@@ -34,3 +34,17 @@
 	border: 1px solid #ddd;
 	border-bottom: 0;
 }
+
+
+button.floating,
+.button.floating {
+	width: 3em;
+	height: 3em;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 1.5em;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	z-index: 9;
+}
